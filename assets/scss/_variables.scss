@@ -1,0 +1,19 @@
+$accent-bold-dark: #6457A6;
+$accent-bold-medium: #08A4BD;
+$accent-light: #FFD2FC;
+$primary-dark: #1B1B1E;
+$primary-light: #FBFFF1;
+$theme-colors: (
+  “light”: $primary-light,
+  “dark”: $primary-dark
+);
+
+$font-weight: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700
+);
+// Required
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
