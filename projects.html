@@ -8,9 +8,54 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="assets/css/global.css">
   <title>Projects | Amanda Cotumaccio</title>
 </head>
+
+
+
+
+
+
+
+
+<style>
+  .card-img-custom {
+    max-width: 100%;
+    max-height: 100%;
+    align-self: center;
+  }
+
+  .card-home {
+    margin: 10px;
+    background-color: #000;
+    border-color: #FD3E81;
+    border-width: 5px;
+    width: 300px;
+  }
+
+  .card .btn {
+    background-color: #FBFFF1;
+    border: none;
+    color: black;
+    max-width: 70%;
+    margin: 5px;
+    align-self: center;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .card .btn:hover {
+    background-color: #92B4F4;
+  }
+</style>
+
+
+
+
+
+
+
 
 <body>
   <div class="container-fluid">
@@ -24,17 +69,126 @@
           <li class="nav-item">
             <a class="nav-link" href="home.html">Home</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Projects<span class="sr-only">(current)</span></a>
-          </li>
+
+
+
           <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
+            <div class="btn-group">
+              <a class="nav-link btn dropbtn" id="navbarDropdown" href="projects.html">All Projects</a>
+              <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="sr-only">Toggle Dropdown</span>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="tetris.html">Tetris</a>
+                <a class="dropdown-item" href="onButton.html">WhereIsTheOnButton</a>
+                <a class="dropdown-item" href="#">Viewing Others</a>
+              </div>
           </li>
+
+
         </ul>
       </div>
     </nav>
   </div>
 
+
+  <h1>All My Projects!</h1>
+  <h2>To learn more about the actual code I used, email me at <adress><a href="mailto:amandacot2022@gmail.com">amandacot2022@gmail.com</a></adress>
+  </h2>
+
+
+  <div class="container">
+    <!-- <div class="row">
+      <h1>Use this site to help you navigate Zoom</h1>
+    </div> -->
+    <div class="row h-50">
+
+
+      <div class="col">
+        <div class="card card-home">
+          <div class="card-body">
+            <h3 class="card-title">Tetris</h3>
+            <p class="card-text"></p>
+          </div>
+          <img class="card-img-bottom card-img-custom" alt="Tetris description" src="images/tetris.jpeg" />
+          <p>
+            Click the button below to learn more about how I created my own version of the popular videogame Tetris!
+          </p>
+          <a href="tetris.html" class="btn stretched-link">Learn More</a>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card card-home">
+          <div class="card-body">
+            <h3 class="card-title">My Website</h3>
+            <p class="card-text"></p>
+          </div>
+          <img class="card-img-bottom card-img-custom" alt="WhereIsTheOnButton" src="images/website.jpeg" />
+          <a href="onButton.html" class="btn stretched-link">Learn More</a>
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+    <div class="row h-50">
+
+
+      <div class="col">
+        <div class="card card-home">
+          <div class="card-body">
+            <h3 class="card-title">Hangman</h3>
+            <p class="card-text"></p>
+          </div>
+          <img class="card-img-bottom card-img-custom" alt="Hangman" src="images/hangman.jpeg" />
+          <a href="#" class="btn stretched-link">Learn More</a>
+        </div>
+
+      </div>
+
+      <div class="col">
+        <div class="card card-home">
+          <div class="card-body">
+            <h3 class="card-title">Doodle jump</h3>
+            <p class="card-text"></p>
+          </div>
+          <img class="card-img-bottom card-img-custom" alt="doodlejump" src="images/doodleJump.jpeg" />
+          <a href="#" class="btn stretched-link">Learn More</a>
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+    <div class="row h-50">
+      <div class="col">
+        <div class="card card-home">
+          <div class="card-body">
+            <h3 class="card-title">Roadtrip</h3>
+            <p class="card-text"></p>
+          </div>
+          <img class="card-img-bottom card-img-custom" alt="roadtrip" src="images/cameraOn2.jpeg" />
+          <a href="#" class="btn stretched-link">Learn More</a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card card-home">
+          <div class="card-body">
+            <h3 class="card-title">Alexa Cafe</h3>
+            <p class="card-text"></p>
+          </div>
+          <img class="card-img-bottom card-img-custom" alt="Alexa Cafe" src="images/galleryViewSection.png" />
+          <a href="#" class="btn stretched-link">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
