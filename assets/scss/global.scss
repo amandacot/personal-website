@@ -1,0 +1,105 @@
+@import './variables';
+h1, h2, h3, h4, h5, h6{
+  font-family: $lato-font;
+}
+p{
+  font-family: $merriweather-font;
+  font-weight: 300;
+  &.paragraph-large {
+    text-align:center;
+    font-size: 40px;
+    margin:auto;
+  }
+}
+
+a{
+  color: $accent-light;
+  &:hover{
+    color: $accent-light;
+  }
+}
+
+body {
+  background-color: $accent-bold-dark;
+  color: $primary-light;
+}
+
+.specificPage {
+  border: 10px solid $primary-bright;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: $accent-bold-dark;
+  padding: 5%;
+}
+
+.col {
+  background-color: $accent-bold-dark;
+  text-align: center;
+}
+
+img {
+  border: 10px solid $primary-dark;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.dropdown {
+  float: left;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: $primary-light;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: $primary-light;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: $primary-dark;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: $primary-light;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-toggle-split::after {
+  color: $primary-dark;
+}
+
+.descriptions {
+  font-size: 25px;
+}
