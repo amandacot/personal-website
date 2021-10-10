@@ -16,7 +16,7 @@
 .card .btn {
   background-color: #FBFFF1;
   border: none;
-  color: black;
+  color: $primary-dark;
   max-width: 70%;
   margin: 5px;
   align-self: center;
@@ -25,5 +25,5 @@
 }
 
 .card .btn:hover {
-  background-color: #92B4F4;
+  background-color: #32CBFF;
 }

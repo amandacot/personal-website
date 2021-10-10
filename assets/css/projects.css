@@ -1,25 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:ital,wght@0,300;1,300&display=swap");
+
 .card-img-custom {
   max-width: 100%;
   max-height: 100%;
-  align-self: center; }
+  align-self: center;
+}
 
 .card-home {
-  margin: 10px;
+  margin: 22px;
   background-color: #1B1B1E;
   border-color: #FD3E81;
   border-width: 5px;
-  width: 300px; }
+  width: 300px;
+  height: 450px;
+}
 
 .card .btn {
   background-color: #FBFFF1;
   border: none;
-  color: black;
+  color: #1B1B1E;
   max-width: 70%;
   margin: 5px;
   align-self: center;
   padding-left: 30px;
-  padding-right: 30px; }
+  padding-right: 30px;
+}
 
 .card .btn:hover {
-  background-color: #92B4F4; }
+  background-color: #32CBFF;
+}
