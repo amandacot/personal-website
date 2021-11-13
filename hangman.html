@@ -9,12 +9,14 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/hangman.css">
   <title>Projects | Amanda Cotumaccio</title>
 </head>
 
 
-<body>
-  <div class="container-fluid">
+<body onload="addOnLoad()">
+  <header>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">Amanda Cotumaccio</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,27 +48,94 @@
 
         </ul>
       </div>
+      </div>
     </nav>
-  </div>
-  <h1 class="page-title">My Own Version of Hangman</h1>
-  <div class="about-container">
-    <div class="row">
-      <div class="col">
 
-        <img class="specificPage" src="images/hangman.png">
-      </div>
-      <div class="col">
-        <h3>Hangman!</h3>
-        <p class="descriptions">
-          Everyone knows the game Hangman, so I decided to make my own online version of the game! I utilized user
-          input and let players select their own word, or I let them pick a category. I learned
-          how to code a keyboard and how to make each letter work when playing hangman! Dashed lines appear
-          for the word you're trying to guess. For each correct letter guess made, I learned how to make that
-          letter appear on the corresponding dashed line. For each mistake made, I learned how to draw a different
-          shape on the canvas to make my hangman.
-        </p>
-      </div>
+  </header>
+  <div class="container-fluid">
 
+    <h1 class="page-title">My Own Version of Hangman</h1>
+    <div class="about-container">
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="btn-game-start">
+            <button class="submit" id="choose-btn" onClick="generateChooseForm()">Write your own word</button>
+            <button class="submit" id="cat-btn" onClick="generateCatForm()">Pick a category</button>
+          </div>
+          <form name="choose-form" id="choose-form" class="form">
+            <div>
+              <label>Enter your own word</label>
+              <input type="text" placeholder="Write your own word here" name="inputWord" id="inputWord">
+            </div>
+            <div>
+              <button type="button" onClick="setInputWord()" class="submitWord">Submit</button>
+            </div>
+
+          </form>
+          <form name="cat-form" id="cat-form" class="form">
+            <div>
+              <label for="categories">Select a category</label>
+              <select name="categories" id="categories">
+                <option value="movies">Movies</option>
+                <option value="food">Food</option>
+                <option value="coding-languages">Coding languages</option>
+                <option value="singers">Singers</option>
+                <option value="TS-albums">Taylor Swift albums</option>
+                <option value="quotes">Quotes</option>
+              </select>
+            </div>
+            <div>
+              <button type="button" onClick="checkCategoryPicked();" class="submitWord">Submit</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+      <div class="row">
+        <div id="col-game" class="col-8">
+
+          <div>
+
+
+
+            <div class="canvasContainer" id="hangmanContainer">
+              <div class="item1">
+                <button class="btn btn-lg" id="start-btn" onClick="startGamebtn()">Start Game</button>
+              </div>
+              <div class="item2">
+                <p id="gameStatus"></p>
+                <p id="catIs"></p>
+                <p id="puzzle"></p>
+              </div>
+              <div class="row-alphabet">
+                <div id="alphabet">
+                </div>
+              </div>
+              <div class="item4">
+                <canvas id="stickFigure"></canvas>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div id="col-description" class="col">
+          <h3>Hangman!</h3>
+          <p class="descriptions">
+            Everyone knows the game Hangman, so I decided to make my own online version of the game! I utilized user
+            input and let players select their own word, or I let them pick a category. I learned
+            how to code a keyboard and how to make each letter work when playing hangman! Dashed lines appear
+            for the word you're trying to guess. For each correct letter guess made, I learned how to make that
+            letter appear on the corresponding dashed line. For each mistake made, I learned how to draw a different
+            shape on the canvas to make my hangman.
+          </p>
+        </div>
+
+      </div>
     </div>
   </div>
 
@@ -74,8 +143,7 @@
 
 
 
-
-
+  <script src="assets/js/hangman.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
