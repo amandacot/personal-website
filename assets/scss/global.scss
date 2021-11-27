@@ -24,11 +24,7 @@ body {
   color: $primary-light;
 }
 
-.specificPage {
-  border: 10px solid $primary-bright;
-  width: 100%;
-  height: 100%;
-}
+
 
 .about-container {
   display: grid;
@@ -42,11 +38,8 @@ body {
   text-align: center;
 }
 
-img {
-  border: 10px solid $primary-dark;
-}
 
-h1,
+h1 ,
 h2,
 h3 {
   text-align: center;
@@ -104,4 +97,8 @@ h3 {
 
 .descriptions {
   font-size: 25px;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    width: 100%;
 }
