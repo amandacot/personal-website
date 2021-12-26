@@ -6,11 +6,12 @@
 }
 
 .card-home {
-  margin: 10px;
+  margin: 10px auto;
   background-color: $primary-dark;
   border-color: #FD3E81;
   border-width: 5px;
   width: 300px;
+  height:80%;
 }
 
 .card .btn {

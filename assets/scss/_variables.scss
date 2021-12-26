@@ -11,15 +11,18 @@ $theme-colors: (
 
 $hangman-accent: #7A3B69;
 
+//font variables
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:ital,wght@0,300;1,300&display=swap');
+$lato-font: 'Lato', sans-serif;
+$merriweather-font: 'Merriweather', serif;
+$header-font-size:2em;
+$default-font-size:1em;
+$secondary-font-size:0.83em;
 $font-weight: (
   "regular": 400,
   "medium": 500,
   "bold": 700
 );
-//font variables
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:ital,wght@0,300;1,300&display=swap');
-$lato-font: 'Lato', sans-serif;
-$merriweather-font: 'Merriweather', serif;
 // Required
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/variables";
