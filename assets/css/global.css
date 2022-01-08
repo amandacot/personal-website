@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:ital,wght@0,300;1,300&display=swap");
+@use "sass:map";
 h1, h2, h3, h4, h5, h6 {
   font-family: "Lato", sans-serif; }
 
@@ -11,22 +12,67 @@ p {
     margin: 20px auto; }
 
 a {
-  color: #32CBFF; }
+  color: #47d1ff; }
   a:hover {
-    color: #32CBFF; }
+    color: #47d1ff; }
+
+a.light-theme {
+  color: #005875; }
+  a.light-theme:hover {
+    color: #005875; }
 
 body {
-  background-color: #6457A6;
-  color: #FBFFF1; }
+  background-color: #41386b;
+  color: #FBFFF1;
+  transition: all .2s ease-in-out; }
+
+body.light-theme {
+  background-color: #CECAE3;
+  color: #1B1B1E; }
+
+.toggle-night {
+  margin: 0 auto;
+  /*change size of toggle with font-size*/
+  font-size: 16%;
+  margin-top: 0.1em;
+  position: relative;
+  height: 16em;
+  width: 27em;
+  border-radius: 12em;
+  transition: all 500ms ease-in-out;
+  background: #292343; }
+
+.toggle-day {
+  background: #FFBF71; }
+
+.moon {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  transition: all 400ms ease-in-out;
+  top: 3em;
+  left: 4em;
+  transform: rotate(-75deg);
+  width: 10em;
+  height: 10em;
+  background: #292343;
+  box-shadow: 3em 2.5em 0 0em #D9FBFF inset, rgba(255, 255, 255, 0.1) 0em -7em 0 -4.5em, rgba(255, 255, 255, 0.1) 3em 7em 0 -4.5em, rgba(255, 255, 255, 0.1) 2em 13em 0 -4em, rgba(255, 255, 255, 0.1) 6em 2em 0 -4.1em, rgba(255, 255, 255, 0.1) 8em 8em 0 -4.5em, rgba(255, 255, 255, 0.1) 6em 13em 0 -4.5em, rgba(255, 255, 255, 0.1) -4em 7em 0 -4.5em, rgba(255, 255, 255, 0.1) -1em 10em 0 -4.5em; }
+
+.sun {
+  top: 4.5em;
+  left: 15em;
+  transform: rotate(0deg);
+  width: 7em;
+  height: 7em;
+  background: #fff;
+  box-shadow: 3em 3em 0 5em #fff inset, 0 -5em 0 -2.7em #fff, 3.5em -3.5em 0 -3em #fff, 5em 0 0 -2.7em #fff, 3.5em 3.5em 0 -3em #fff, 0 5em 0 -2.7em #fff, -3.5em 3.5em 0 -3em #fff, -5em 0 0 -2.7em #fff, -3.5em -3.5em 0 -3em #fff; }
 
 .about-container {
   display: grid;
   grid-template-columns: auto auto;
-  background-color: #6457A6;
   padding: 5%; }
 
 .col {
-  background-color: #6457A6;
   text-align: center; }
 
 h1,

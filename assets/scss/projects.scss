@@ -3,15 +3,22 @@
   max-width: 100%;
   max-height: 100%;
   align-self: center;
+  margin-top: 20%;
 }
 
 .card-home {
   margin: 10px auto;
-  background-color: $primary-dark;
-  border-color: #FD3E81;
+  background-color: map-get($dark-theme, "accent-neutral");
+  border-color: map-get($dark-theme, "accent-bright");
   border-width: 5px;
   width: 300px;
-  height:80%;
+  height:85%;
+  padding:5px;
+}
+
+body.light-theme .card-home{
+  background-color: map-get($light-theme, "accent-neutral");
+  border-color: map-get($light-theme, "accent-bright");
 }
 
 .card .btn {
@@ -20,6 +27,7 @@
   color: $primary-dark;
   max-width: 70%;
   margin: 5px;
+  margin-bottom:10px;
   align-self: center;
   padding-left: 30px;
   padding-right: 30px;
