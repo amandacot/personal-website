@@ -3,7 +3,9 @@ var btn = document.getElementById("start-btn");
 var span = document.getElementsByClassName("close")[0];
 var catForm = document.getElementById("cat-form");
 var chooseForm = document.getElementById("choose-form");
+var categoryError = document.getElementById("categoryError");
 var word;
+var hint;
 var puzzle = [];
 var mistakes = 0;
 var letter = false;
@@ -23,6 +25,35 @@ function setInputWord() {
   modal.style.display = "none";
   restartGame();
 }
+
+function getMusicalsData() {
+  fetch('https://opentdb.com/api.php?amount=1&category=13&difficulty=medium&type=multiple')
+    .then(response => response.json())
+    .then(data => {
+      if (data["response_code"] === 2) {
+        categoryError.innerHTML = "An error has occurred, please select a different category";
+        console.log("failed");
+      } else {
+        setWord(data["results"][0]["correct_answer"]);
+        setHint(data["results"][0]["question"]);
+        console.log(word);
+        closeModalStartGame();
+      }
+    });
+  // .catch((error) => {
+  //   console.log(error);
+  //   categoryError.innerHTML = "An error has occurred, please select a different category";
+  // });
+}
+
+function setHint(hintString) {
+  hint = hintString;
+}
+
+function showHint() {
+  document.getElementById("hint-string").innerHTML = hint;
+}
+
 
 function checkCategoryPicked() {
   var category = document.getElementById("categories").value;
@@ -45,22 +76,33 @@ function checkCategoryPicked() {
   if (category === "quotes") {
     randomPicker(5);
   }
+  if (category === "musicals") {
+    getMusicalsData();
+    document.getElementById("hint-btn").style.display = "inline-block";
+    console.log("musicals");
+  }
+
+}
+
+function closeModalStartGame() {
+  var category = document.getElementById("categories").value;
   modal.style.display = "none";
   document.getElementById("catIs").innerHTML = "Category is: " + category;
   restartGame();
 }
 
-
 function randomPicker(num) {
   var randWord = categories[num][Math.floor(Math.random() * categories.length)];
-  console.log(randWord);
+  //console.log(randWord);
   setWord(randWord);
+  closeModalStartGame();
 }
 
 
 //function submitCatForm(){
 //    document.getElementById('cat-form').submit();
 //}
+
 
 
 function generateCatForm() {
@@ -120,7 +162,7 @@ function setWord(selectedWord) {
 
 function checkGuess(guess) {
   document.getElementById(guess).setAttribute('disabled', true);
-  console.log(guess);
+  //console.log(guess);
   for (let i = 0; i < word.length; i++) {
     if (guess == word[i]) {
       puzzle[i] = guess;
@@ -134,8 +176,8 @@ function checkGuess(guess) {
   if (letter == true) {
     letter = false;
   }
-  console.log("this is the puzzle variable ");
-  console.log(puzzle);
+  //console.log("this is the puzzle variable ");
+  //console.log(puzzle);
 }
 
 function updatePuzzle() {
@@ -146,7 +188,7 @@ function generateButtons() {
   let alphabetButtons = 'abcdefghijklmnopqrstuvwxyz'.split('').map(letter =>
     `<button class = "btn btn-alpha" id = '` + letter + `' onClick = "checkGuess('` + letter + `')">` + letter + `</button>`).join('');
   document.getElementById("alphabet").innerHTML = alphabetButtons;
-  console.log(alphabetButtons);
+  //console.log(alphabetButtons);
 
 }
 
@@ -156,7 +198,7 @@ function updateMistakes() {
     mistakes += 1;
     drawArray[mistakes - 1]();
     updateLivesLabel();
-    console.log(mistakes);
+    //console.log(mistakes);
   }
 }
 
@@ -197,6 +239,7 @@ function resetGame() {
   disableLetterButtons();
   document.getElementById("gameStatus").innerHTML = "Click on Start Game button to begin a new game";
   document.getElementById("catIs").innerHTML = "";
+  document.getElementById("hint-string").innerHTML = "";
 }
 
 function restartGame() {

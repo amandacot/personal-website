@@ -20,7 +20,7 @@ a{
   }
 }
 
-a.light-theme{
+body.light-theme a{
   color: map-get($light-theme,"foreground-accent");
   &:hover{
     color: map-get($light-theme,"foreground-accent");
@@ -119,6 +119,10 @@ h3 {
   float: left;
 }
 
+.dropdown-menu{
+  background-color:inherit;
+}
+
 .dropdown .dropbtn {
   font-size: $default-font-size;
   border: none;
@@ -128,6 +132,18 @@ h3 {
   background-color: inherit;
   font-family: inherit;
   margin: 0;
+}
+
+.bg-dark{
+  background-color: map-get($dark-theme, "nav-background") !important;
+}
+
+.navbar-dark .navbar-brand, .navbar-dark .navbar-nav .active>.nav-link{
+  color: map-get($dark-theme, "nav-color");
+}
+
+.navbar-dark .navbar-nav .nav-link{
+color: map-get($dark-theme, "nav-color-opaque");
 }
 
 .navbar a:hover,

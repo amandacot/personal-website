@@ -16,9 +16,9 @@ a {
   a:hover {
     color: #47d1ff; }
 
-a.light-theme {
+body.light-theme a {
   color: #005875; }
-  a.light-theme:hover {
+  body.light-theme a:hover {
     color: #005875; }
 
 body {
@@ -84,6 +84,9 @@ h3 {
 .dropdown {
   float: left; }
 
+.dropdown-menu {
+  background-color: inherit; }
+
 .dropdown .dropbtn {
   font-size: 1em;
   border: none;
@@ -93,6 +96,15 @@ h3 {
   background-color: inherit;
   font-family: inherit;
   margin: 0; }
+
+.bg-dark {
+  background-color: #9f9fa8 !important; }
+
+.navbar-dark .navbar-brand, .navbar-dark .navbar-nav .active > .nav-link {
+  color: #1B1B1E; }
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #1B1B1E97; }
 
 .navbar a:hover,
 .dropdown:hover .dropbtn {

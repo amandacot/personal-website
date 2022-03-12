@@ -71,6 +71,7 @@
           <div class="btn-game-start">
             <button class="submit" id="choose-btn" onClick="generateChooseForm()">Write your own word</button>
             <button class="submit" id="cat-btn" onClick="generateCatForm()">Pick a category</button>
+
           </div>
           <form name="choose-form" id="choose-form" class="form">
             <div>
@@ -92,7 +93,13 @@
                 <option value="singers">Singers</option>
                 <option value="TS-albums">Taylor Swift albums</option>
                 <option value="quotes">Quotes</option>
+                <option value="musicals">Musicals and Theatre</option>
               </select>
+            </div>
+            <div>
+              <p id="categoryError">
+
+              </p>
             </div>
             <div>
               <button type="button" onClick="checkCategoryPicked();" class="submitWord">Submit</button>
@@ -112,17 +119,24 @@
               <div class="item1">
                 <button class="btn btn-lg" id="start-btn" onClick="startGamebtn()">Start Game</button>
               </div>
+              <div class="item4">
+                <canvas id="stickFigure"></canvas>
+              </div>
               <div class="item2">
                 <p id="gameStatus"></p>
                 <p id="catIs"></p>
                 <p id="puzzle"></p>
               </div>
+              <div id="hint-container">
+                <button class="btn btn-sm" id="hint-btn" onClick="showHint()">
+                  <img src="images/lightbulb.png" />
+                </button>
+                <p id="hint-string">
+                </p>
+              </div>
               <div class="row-alphabet">
                 <div id="alphabet">
                 </div>
-              </div>
-              <div class="item4">
-                <canvas id="stickFigure"></canvas>
               </div>
             </div>
 
