@@ -120,7 +120,7 @@ h3 {
 }
 
 .dropdown-menu{
-  background-color:inherit;
+
 }
 
 .dropdown .dropbtn {
@@ -144,6 +144,18 @@ h3 {
 
 .navbar-dark .navbar-nav .nav-link{
 color: map-get($dark-theme, "nav-color-opaque");
+}
+
+.bg-light{
+  background-color: map-get($light-theme, "nav-background") !important;
+}
+
+.navbar-light .navbar-nav .active>.nav-link{
+  color: map-get($light-theme, "nav-color");
+}
+
+.navbar-light .navbar-nav .nav-link{
+color: map-get($light-theme, "nav-color-opaque");
 }
 
 .navbar a:hover,

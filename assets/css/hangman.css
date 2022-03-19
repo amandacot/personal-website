@@ -208,6 +208,9 @@ canvas {
   #hint-container img {
     max-width: 50px;
     float: left; }
+  #hint-container p {
+    max-width: 250px;
+    margin-left: 21%; }
 
 .canvasContainer {
   display: grid;

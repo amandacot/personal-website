@@ -16,7 +16,10 @@ $light-theme: (
   "background": #CECAE3,
   "foreground-accent":#005875,
   "accent-bright": #FE9ABD,
-  "accent-neutral": #D4D4D9
+  "accent-neutral": #D4D4D9,
+  "nav-background": #FBFFF1,
+  "nav-color": #e9ecef,
+  "nav-color-opaque": rgba(0,0,0,.9)
 );
 $dark-theme:(
   "background": #41386b,
