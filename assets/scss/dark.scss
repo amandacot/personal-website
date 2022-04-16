@@ -1,0 +1,8 @@
+@import './variables';
+@use "sass:map";
+a{
+  color: map-get($dark-theme,"foreground-accent");
+  &:hover{
+    color: map-get($dark-theme,"foreground-accent");
+  }
+}

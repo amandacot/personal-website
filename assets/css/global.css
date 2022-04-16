@@ -11,11 +11,6 @@ p {
     font-size: 1em;
     margin: 20px auto; }
 
-a {
-  color: #47d1ff; }
-  a:hover {
-    color: #47d1ff; }
-
 body.light-theme a {
   color: #005875; }
   body.light-theme a:hover {

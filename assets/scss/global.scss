@@ -13,12 +13,7 @@ p{
   }
 }
 
-a{
-  color: map-get($dark-theme,"foreground-accent");
-  &:hover{
-    color: map-get($dark-theme,"foreground-accent");
-  }
-}
+
 
 body.light-theme a{
   color: map-get($light-theme,"foreground-accent");
