@@ -1,12 +1,12 @@
 @import 'themes.scss';
 :root {
-  color-scheme: light dark;
+  color-scheme: dark light;
 }
 
-body {
+.app-container {
   @include themify($themes){
     color: themed('text-color');
-    background-color:('background');
+    background-color: themed('background');
   }
 
 }

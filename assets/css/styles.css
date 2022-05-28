@@ -1,0 +1,10 @@
+:root {
+  color-scheme: dark light; }
+
+.theme-light .app-container {
+  color: #1B1B1E;
+  background-color: #CECAE3; }
+
+.theme-dark .app-container {
+  color: #FBFFF1;
+  background-color: #41386b; }

@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:ital,wght@0,300;1,300&display=swap");
+.light {
+  --background-color: #CECAE3;
+  --text-color: #1B1B1E;
+  --foreground-accent: #005875;
+  --accent-bright: #FE9ABD;
+  --accent-neutral: #D4D4D9;
+  --nav-background: #FBFFF1;
+  --nav-color: #41386b;
+  --nav-color-opaque: rgba(0, 0, 0, 0.9); }

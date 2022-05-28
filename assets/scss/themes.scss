@@ -1,25 +1,25 @@
-$themes:{
-  light:{
-  "background": #CECAE3,
-  "text-color": #1B1B1E,
-  "foreground-accent":#005875,
-  "accent-bright": #FE9ABD,
-  "accent-neutral": #D4D4D9,
-  "nav-background": #FBFFF1,
-  "nav-color": #e9ecef,
-  "nav-color-opaque": rgba(0,0,0,.9)
-  },
-  dark:{
-  "background": #41386b,
-  "text-color": #FBFFF1,
-  "foreground-accent": #47d1ff,
-  "accent-bright": #FD3E81,
-  "accent-neutral": #1B1B1E,
-  "nav-background": #9f9fa8,
-  "nav-color": #1B1B1E,
-  "nav-color-opaque": #1B1B1E97
-  },
-};
+$themes: (
+  light: (
+    "background": #CECAE3,
+    "text-color": #1B1B1E,
+    "foreground-accent":#005875,
+    "accent-bright": #FE9ABD,
+    "accent-neutral": #D4D4D9,
+    "nav-background": #FBFFF1,
+    "nav-color": #e9ecef,
+    "nav-color-opaque": rgba(0,0,0,.9)
+  ),
+  dark: (
+    "background": #41386b,
+    "text-color": #FBFFF1,
+    "foreground-accent": #47d1ff,
+    "accent-bright": #FD3E81,
+    "accent-neutral": #1B1B1E,
+    "nav-background": #9f9fa8,
+    "nav-color": #1B1B1E,
+    "nav-color-opaque": #1B1B1E97
+  ),
+);
 
 
 
@@ -42,4 +42,8 @@ $themes:{
 
 @function themed($key) {
   @return map-get($theme-map, $key);
+}
+
+@function themed-light($theme, $key){
+  @return map-get($theme, $key);
 }

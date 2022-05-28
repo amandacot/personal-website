@@ -1,0 +1,16 @@
+:root {
+    color-scheme: dark light;
+    supported-color-schemes: dark light;
+     --duration: 0.5s;
+    --timing: ease;  
+  }
+
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition:
+      color var(--duration) var(--timing),
+      background-color var(--duration) var(--timing);  
+  }
+
+  
