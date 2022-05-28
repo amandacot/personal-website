@@ -1,0 +1,18 @@
+@import './variables';
+
+@function themed($key) {
+    @return map-get($light-theme, $key);
+}
+
+.light {
+    --background-color: #{themed('background')};
+    --text-color: #{themed('text-color')};
+    --foreground-accent: #{themed('foreground-accent')};
+    --accent-bright: #{themed('accent-bright')};
+    --accent-neutral: #{themed('accent-neutral')};
+    --nav-background: #{themed('nav-background')};
+    --nav-color: #{themed('nav-color')};
+    --nav-color-opaque: #{themed('nav-color-opaque')};
+};
+
+

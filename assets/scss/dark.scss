@@ -1,8 +1,16 @@
 @import './variables';
-@use "sass:map";
-a{
-  color: map-get($dark-theme,"foreground-accent");
-  &:hover{
-    color: map-get($dark-theme,"foreground-accent");
-  }
+
+@function themed($key) {
+    @return map-get($dark-theme, $key);
 }
+
+:root{
+    --background-color: #{themed('background')};
+    --text-color: #{themed('text-color')};
+    --foreground-accent: #{themed('foreground-accent')};
+    --accent-bright: #{themed('accent-bright')};
+    --accent-neutral: #{themed('accent-neutral')};
+    --nav-background: #{themed('nav-background')};
+    --nav-color: #{themed('nav-color')};
+    --nav-color-opaque: #{themed('nav-color-opaque')};
+};

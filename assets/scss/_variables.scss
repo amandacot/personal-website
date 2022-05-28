@@ -14,15 +14,17 @@ $sun-color:#fff;
 $toggle-background-day:#FFBF71;
 $light-theme: (
   "background": #CECAE3,
+  "text-color": #1B1B1E,
   "foreground-accent":#005875,
   "accent-bright": #FE9ABD,
   "accent-neutral": #D4D4D9,
   "nav-background": #FBFFF1,
-  "nav-color": #e9ecef,
+  "nav-color": #41386b,
   "nav-color-opaque": rgba(0,0,0,.9)
 );
 $dark-theme:(
   "background": #41386b,
+  "text-color": #FBFFF1,
   "foreground-accent": #47d1ff,
   "accent-bright": #FD3E81,
   "accent-neutral": #1B1B1E,

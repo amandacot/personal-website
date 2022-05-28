@@ -1,30 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:ital,wght@0,300;1,300&display=swap");
-@use "sass:map";
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Lato", sans-serif; }
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:ital,wght@0,300;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:ital,wght@0,300;1,300&display=swap");
+:root {
+  --background-color: #41386b;
+  --text-color: #FBFFF1;
+  --foreground-accent: #47d1ff;
+  --accent-bright: #FD3E81;
+  --accent-neutral: #1B1B1E;
+  --nav-background: #9f9fa8;
+  --nav-color: #1B1B1E;
+  --nav-color-opaque: #1B1B1E97; }
 
-p {
-  font-family: "Merriweather", serif;
-  font-weight: 300; }
-  p.centered-paragraph {
-    text-align: center;
-    font-size: 1em;
-    margin: 20px auto; }
-
-body.light-theme a {
-  color: #005875; }
-  body.light-theme a:hover {
-    color: #005875; }
-
-body {
-  background-color: #41386b;
-  color: #FBFFF1;
-  transition: all .2s ease-in-out; }
-
-body.light-theme {
-  background-color: #CECAE3;
-  color: #1B1B1E; }
-
+/* Dark/Light mode toggle css */
 .toggle-night {
   margin: 0 auto;
   /*change size of toggle with font-size*/
@@ -62,6 +49,26 @@ body.light-theme {
   background: #fff;
   box-shadow: 3em 3em 0 5em #fff inset, 0 -5em 0 -2.7em #fff, 3.5em -3.5em 0 -3em #fff, 5em 0 0 -2.7em #fff, 3.5em 3.5em 0 -3em #fff, 0 5em 0 -2.7em #fff, -3.5em 3.5em 0 -3em #fff, -5em 0 0 -2.7em #fff, -3.5em -3.5em 0 -3em #fff; }
 
+@use "sass:map";
+body {
+  background-color: var(--background-color);
+  color: var(--text-color); }
+  body a {
+    color: var(--foreground-accent); }
+    body a:hover {
+      color: var(--foreground-accent); }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato", sans-serif; }
+
+p {
+  font-family: "Merriweather", serif;
+  font-weight: 300; }
+  p.centered-paragraph {
+    text-align: center;
+    font-size: 1em;
+    margin: 20px auto; }
+
 .about-container {
   display: grid;
   grid-template-columns: auto auto;
@@ -70,9 +77,7 @@ body.light-theme {
 .col {
   text-align: center; }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   text-align: center;
   margin-top: 15px; }
 
@@ -83,45 +88,36 @@ h3 {
   font-size: 1em;
   border: none;
   outline: none;
-  color: #FBFFF1;
+  color: var(--text-color);
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
   margin: 0; }
 
-.bg-dark {
-  background-color: #9f9fa8 !important; }
+.navbar {
+  background-color: var(--nav-background) !important; }
 
-.navbar-dark .navbar-brand, .navbar-dark .navbar-nav .active > .nav-link {
-  color: #1B1B1E; }
+.navbar-brand, .navbar-nav .active > .nav-link {
+  color: var(--nav-color) !important; }
 
-.navbar-dark .navbar-nav .nav-link {
-  color: #1B1B1E97; }
-
-.bg-light {
-  background-color: #FBFFF1 !important; }
-
-.navbar-light .navbar-nav .active > .nav-link {
-  color: #e9ecef; }
-
-.navbar-light .navbar-nav .nav-link {
-  color: rgba(0, 0, 0, 0.9); }
+.navbar-nav .nav-link {
+  color: var(--nav-color-opaque) !important; }
 
 .navbar a:hover,
 .dropdown:hover .dropbtn {
   display: block; }
 
-.dropdown-content {
+.dropdown-menu {
   display: none;
   position: absolute;
-  background-color: #FBFFF1;
+  background-color: var(--nav-background);
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1; }
 
-.dropdown-content a {
+.dropdown-menu a {
   float: none;
-  color: #1B1B1E;
+  color: var(--nav-color-opaque);
   text-decoration: none;
   display: block;
   text-align: left; }
@@ -140,3 +136,13 @@ h3 {
 
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
   width: 100%; }
+
+.light {
+  --background-color: #CECAE3;
+  --text-color: #1B1B1E;
+  --foreground-accent: #005875;
+  --accent-bright: #FE9ABD;
+  --accent-neutral: #D4D4D9;
+  --nav-background: #FBFFF1;
+  --nav-color: #41386b;
+  --nav-color-opaque: rgba(0, 0, 0, 0.9); }
