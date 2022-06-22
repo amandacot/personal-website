@@ -61,10 +61,10 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Lato", sans-serif; }
 
-p {
+p, ul {
   font-family: "Merriweather", serif;
   font-weight: 300; }
-  p.centered-paragraph {
+  p.centered-paragraph, ul.centered-paragraph {
     text-align: center;
     font-size: 1em;
     margin: 20px auto; }
