@@ -4253,7 +4253,9 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 }
 
 .w-100 {
-  width: 100% !important
+  width: 50% !important
+  margin-left:20%
+  border:5px solid rgba(255,255,255)
 }
 
 .w-auto {
