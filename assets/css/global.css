@@ -2,14 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:ital,wght@0,300;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:ital,wght@0,300;1,300&display=swap");
 :root {
-  --background-color: #47d1ff;
+  --background-color: #CA98D7;
   --text-color: #FBFFF1;
   --foreground-accent: #47d1ff;
   --accent-bright: #FD3E81;
   --accent-neutral: #1B1B1E;
-  --nav-background: #9f9fa8;
-  --nav-color: #1B1B1E;
-  --nav-color-opaque: #1B1B1E97; }
+  --nav-background: #1B1B1E;
+  --nav-color: #FBFFF1;
+  --nav-color-opaque: #FBFFF1; }
 
 /* Dark/Light mode toggle css */
 .toggle-night {
