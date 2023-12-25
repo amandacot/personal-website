@@ -95,7 +95,9 @@ h1, h2, h3 {
   margin: 0; }
 
 .navbar {
-  background-color: var(--nav-background) !important; }
+  background-color: var(--nav-background) !important;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
 
 .navbar-brand, .navbar-nav .active > .nav-link {
   color: var(--nav-color) !important; }
