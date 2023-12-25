@@ -8,11 +8,12 @@
 .card-home {
   margin: 10px auto;
   background-color: #4E4E56;
-  border-color: #FBFFF1;
+  border-color: #3A3A40;
   border-width: 5px;
   width: 300px;
   height: 85%;
-  padding: 5px; }
+  padding: 5px; 
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2); }
 
 body.light-theme .card-home {
   background-color: #D4D4D9;
