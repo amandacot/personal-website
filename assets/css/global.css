@@ -63,7 +63,8 @@ h1, h2, h3, h4, h5, h6 {
 
 p, ul {
   font-family: "Merriweather", serif;
-  font-weight: 300; }
+  font-weight: 300;
+  font-size: 17px; }
   p.centered-paragraph, ul.centered-paragraph {
     text-align: center;
     font-size: 1em;
@@ -75,7 +76,7 @@ p, ul {
   padding: 5%; }
 
 .col {
-  text-align: center; }
+  text-align: left; }
 
 h1, h2, h3 {
   text-align: center;
