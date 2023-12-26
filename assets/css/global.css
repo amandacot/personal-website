@@ -52,7 +52,7 @@
 @use "sass:map";
 body {
   background-color: var(--background-color);
-  /* color: var(--text-color); */
+  color: var(--text-color); 
 }
   body a {
     color: var(--foreground-accent); }
@@ -141,12 +141,8 @@ h1, h2, h3 {
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
   width: 100%; }
 
-#learn-more{
-  text-color:#1B1B1E;
-}
-
 .light {
-  --background-color: #CECAE3;
+  --background-color: #B5AFD5;
   --text-color: #FBFFF1;
   --foreground-accent: #0099CC;
   --accent-bright: #FE9ABD;
