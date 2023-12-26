@@ -140,7 +140,7 @@ h1, h2, h3 {
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
   width: 100%; }
 
-.h1, #learn-more{
+#learn-more{
   text-color:#1B1B1E;
 }
 
