@@ -148,5 +148,5 @@ h1, h2, h3 {
   --accent-bright: #FE9ABD;
   --accent-neutral: #D4D4D9;
   --nav-background: #FBFFF1;
-  --nav-color: #41386b;
+  --nav-color: rgba(0, 0, 0, 0.9);
   --nav-color-opaque: rgba(0, 0, 0, 0.9); }
