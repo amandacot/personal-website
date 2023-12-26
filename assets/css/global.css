@@ -141,12 +141,12 @@ h1, h2, h3 {
   width: 100%; }
 
 .h1, #learn-more{
-  color:#000;
+  text-color:#1B1B1E;
 }
 
 .light {
   --background-color: #CECAE3;
-  --text-color: #1B1B1E;
+  --text-color: #FBFFF1;
   --foreground-accent: #005875;
   --accent-bright: #FE9ABD;
   --accent-neutral: #D4D4D9;
