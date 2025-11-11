@@ -1,1 +1,158 @@
+<!doctype html>
+<html lang="en">
 
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="">
+  <script>
+    // If `prefers-color-scheme` is not supported, fall back to dark mode.
+    // In this case, dark.css will be downloaded with `highest` priority.
+    if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
+      document.documentElement.style.display = 'none';
+      document.head.insertAdjacentHTML(
+        'beforeend',
+        '<link rel="stylesheet" href="assets/css/dark.css" onload="document.documentElement.style.display = \'\'">',
+      );
+    }
+  </script>
+  <!--
+  Conditionally either load the light or the dark stylesheet. The matching file
+  will be downloaded with `highest`, the non-matching file with `lowest`
+  priority. If the browser doesn't support `prefers-color-scheme`, the media
+  query is unknown and the files are downloaded with `lowest` priority (but
+  above I already force `highest` priority for my default light experience).
+-->
+  <link rel="stylesheet" href="assets/css/dark.css" media="(prefers-color-scheme: dark)" />
+  <link rel="stylesheet" href="assets/css/light.css" media="(prefers-color-scheme: light)" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/global.css">
+
+  <title>Home | Amanda Cotumaccio</title>
+</head>
+
+<style>
+  h1,
+  h2,
+  h3 {
+    text-align: center;
+  }
+  .xp { padding: 4rem 5%; }
+.xp-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.25rem;
+}
+.xp-card {
+  grid-column: span 12;
+  background: #FFFFFF;                    /* sits nicely over your gradient */
+  color: var(--nav-color);                /* dark text from your vars */
+  border-radius: 14px;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.08);
+  padding: 1.25rem 1.25rem 1rem;
+  transition: transform .15s ease, box-shadow .2s ease;
+}
+.xp-card:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(0,0,0,0.12); }
+
+@media (min-width: 720px) {
+  .xp-card { grid-column: span 6; }       /* 2-up on tablets */
+}
+@media (min-width: 1060px) {
+  .xp-card { grid-column: span 4; }       /* 3-up on desktop */
+}
+
+.xp-head h3 { margin: 0; color: var(--nav-color); }
+.xp-meta { display:block; margin-top:.25rem; color: rgba(0,0,0,0.65); font-size: .95rem; }
+
+.xp-bullets { margin: .75rem 0 0 1.1rem; }
+.xp-bullets li { margin-bottom: .35rem; }
+
+.xp-tags { margin-top: .75rem; display:flex; flex-wrap:wrap; gap:.5rem; }
+.xp-tags span{
+  font-size: .8rem;
+  padding: .25rem .5rem;
+  border-radius: 999px;
+  background: #EAE4FA;                    /* lavender chip */
+  color: var(--foreground-accent);
+}
+
+</style>
+
+
+
+<body>
+  <script>
+    const theme = localStorage.getItem('theme') || 'dark';
+    document.body.toggleClass('light');
+  </script>
+
+<section id="experience" class="xp">
+  <h2>Experience</h2>
+
+  <div class="xp-grid">
+    <!-- IMMA -->
+    <article class="xp-card">
+      <header class="xp-head">
+        <h3>Irish Museum of Modern Art (IMMA)</h3>
+        <span class="xp-meta">Digital Systems & UX Intern · May–Jul 2025 · Dublin, IE</span>
+      </header>
+      <ul class="xp-bullets">
+        <li>Customized Shopify (Liquid/CSS) components aligned to brand & accessibility.</li>
+        <li>Evaluated the Smartify app in-gallery; prioritized fixes to improve engagement.</li>
+        <li>Produced phishing-awareness content and security training materials.</li>
+      </ul>
+      <footer class="xp-tags">
+        <span>Liquid</span><span>CSS</span><span>UX Research</span><span>Accessibility</span>
+      </footer>
+    </article>
+
+    <!-- UMG -->
+    <article class="xp-card">
+      <header class="xp-head">
+        <h3>Universal Music Group</h3>
+        <span class="xp-meta">Global Technology, D2C Engineering Intern · Summer 2024</span>
+      </header>
+      <ul class="xp-bullets">
+        <li>Supported artist site updates and integrations; streamlined release workflows.</li>
+        <li>Debugged theme components and improved page performance.</li>
+        <li>Partnered with designers to ship accessible UI patterns.</li>
+      </ul>
+      <footer class="xp-tags">
+        <span>JavaScript</span><span>Theme Dev</span><span>Performance</span><span>A11y</span>
+      </footer>
+    </article>
+
+    <!-- Selected Projects -->
+    <article class="xp-card">
+      <header class="xp-head">
+        <h3>Selected Academic Projects — University of Pittsburgh</h3>
+        <span class="xp-meta">Coursework Highlights</span>
+      </header>
+      <ul class="xp-bullets">
+        <li>AWS image pipeline: S3 prefix routing → SNS → Lambda (container images in ECR).</li>
+        <li>Conway’s Game of Life optimization with profiling, pinning tests, and refactors.</li>
+        <li>Filesystem work in C (direct, single-indirect, double-indirect block pointers).</li>
+      </ul>
+      <footer class="xp-tags">
+        <span>AWS</span><span>Python</span><span>Java</span><span>C</span>
+      </footer>
+    </article>
+  </div>
+
+  <p class="centered-paragraph" style="margin-top:24px;">
+    <a href="/resume.pdf">Download Résumé</a>
+  </p>
+</section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="assets/js/global.js"></script>
+
+</body>
+
+
+
+</html>
