@@ -88,7 +88,51 @@
     const theme = localStorage.getItem('theme') || 'dark';
     document.body.toggleClass('light');
   </script>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Amanda Cotumaccio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
 
+          <li class="nav-item">
+            <div class="btn-group">
+              <a class="nav-link btn dropbtn" id="navbarDropdown" href="projects.html">All Projects</a>
+              <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="sr-only">Toggle Dropdown</span>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="icecream.html">Ice Cream</a>
+                <a class="dropdown-item" href="hangman.html">Hangman</a>
+                <a class="dropdown-item" href="doodlejump.html">Doodle Jump</a>
+                <a class="dropdown-item" href="tetris.html">Tetris</a>
+                <a class="dropdown-item" href="onButton.html">Where Is The On Button?</a>
+              </div>
+          </li>
+
+           <li class="nav-item">
+              <a class="nav-link" href="experience.html">Experience</a>
+             </li>
+
+           <li class="nav-item">
+             <a class="nav-link" href="#">Contact</a>
+             </li>
+
+        </ul>
+      </div>
+      </div>
+      <div class="toggle-night">
+        <div class="moon">
+
+        </div>
+      </div>
+    </nav>
+  </header>
 <section id="experience" class="xp">
   <h2>Experience</h2>
 
