@@ -67,7 +67,7 @@ background: #EAE4FA;
 
 @use "sass:map";
 body {
-  background: var(--background-color);
+  background: linear-gradient(180deg, #D7C6E8 0%, #F9F7FB 80%);
   color: var(--text-color); 
 }
   body a {
