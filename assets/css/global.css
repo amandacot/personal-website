@@ -24,6 +24,15 @@
   /* --nav-color-opaque: #FBFFF1;  */
   --nav-color-opaque: #2C2C2C;
 }
+html, body {
+  min-height: 100vh;
+  margin: 0;              /* remove default body margin */
+}
+
+html {
+  background: transparent;  /* make sure html isn't also styling a background */
+}
+
 
 /* Dark/Light mode toggle css */
 .toggle-night {
