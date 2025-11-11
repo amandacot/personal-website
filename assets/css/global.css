@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:ital,wght@0,300;1,300&display=swap");
 :root {
   /* --background-color: #5A4D93; */
-  --background-color: linear-gradient(180deg, #B7A3CC 0%, #F9F7FB 100%);
+   --background-color: #B7A3CC;
   
   --text-color: #FBFFF1;
   
@@ -67,7 +67,7 @@ background: #EAE4FA;
 
 @use "sass:map";
 body {
-  background: linear-gradient(180deg, #D7C6E8 0%, #F9F7FB 80%);
+  background: linear-gradient(180deg, #B7A3CC 0%, #F9F7FB 100%);
   color: var(--text-color); 
 }
   body a {
