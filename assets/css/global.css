@@ -233,19 +233,14 @@ h1, h2, h3 {
 
 /* icon styles */
 .navbar-icons img {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: #EAE4FA;
-  padding: 6px;
-  transition: transform 0.15s ease, background 0.2s ease;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  width: 35px;
+  height: 35px;
+  margin-left:15px;
 }
 
 /* hover effect */
 .navbar-icons img:hover {
-  background: #CBBBE0;
-  transform: translateY(-2px);
+  transition: transform 0.15s ease, background 0.2s ease;
 }
 
 /* adjust on small screens */
