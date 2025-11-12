@@ -228,9 +228,7 @@ h1, h2, h3 {
 
 /* icon container */
 .navbar-icons {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
+
 }
 
 /* icon styles */
