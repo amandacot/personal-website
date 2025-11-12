@@ -36,6 +36,28 @@ html {
   background: transparent;  /* make sure html isn't also styling a background */
 }
 
+.cta-row { margin-top: 1rem; display: flex; gap: .6rem; flex-wrap: wrap; }
+
+.btn-chip {
+  display: inline-block;
+  padding: .5rem 1rem;                 /* same visual weight as tags */
+  border-radius: 999px;                /* full pill */
+  background: #EAE4FA;                 /* same as tag bg */
+  color: var(--foreground-accent);     /* same as tag text (lavender) */
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.02), 0 8px 18px rgba(143,116,181,0.15);
+  transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.btn-chip:hover,
+.btn-chip:focus-visible {
+  background: #CBBBE0;                 /* tag hover */
+  transform: translateY(-1px);
+  box-shadow: 0 2px 0 rgba(0,0,0,0.03), 0 12px 26px rgba(143,116,181,0.22);
+  outline: none;
+}
+
 
 /* Dark/Light mode toggle css */
 .toggle-night {
