@@ -45,13 +45,13 @@ html {
   gap: 0.6rem;
 }
 
-/* Matches your tag chips exactly */
+/* Matches your tag chips exactly 
 .btn-pill {
   display: inline-block;
   padding: 0.5rem 1.1rem;
-  border-radius: 999px;           /* full round pill */
-  background: #EAE4FA;            /* same background as your tags */
-  color: var(--foreground-accent); /* lavender text color from your theme */
+  border-radius: 999px;           
+  background: #EAE4FA;            
+  color: var(--foreground-accent); 
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
@@ -61,7 +61,7 @@ html {
 
 .btn-pill:hover,
 .btn-pill:focus-visible {
-  /* background: #CBBBE0;            /* slightly darker lavender on hover */ */
+  /* background: #CBBBE0;           
   background: #D4C7E6;
   text-decoration:none;
   transform: translateY(-1px);
@@ -70,7 +70,80 @@ html {
 }
 .btn-pill {
   text-shadow: 0 1px 0 rgba(255,255,255,0.6);
+} */
+
+
+
+
+
+
+
+/* Make the two-column hero behave like the mockup */
+.hero-about {
+  grid-template-columns: 1.15fr 1fr;       /* text | photo */
+  align-items: center;
+  gap: clamp(1rem, 3vw, 3rem);
+  padding-top: clamp(1.5rem, 4vw, 3rem);
 }
+
+/* Bigger, comfy intro */
+.hero-about .descriptions {
+  font-size: clamp(1.05rem, 1.2vw + 0.6rem, 1.25rem);
+  line-height: 1.7;
+  max-width: 56ch;
+}
+
+/* Photo on the right, larger, clean framing */
+.profile-photo-lg {
+  width: min(520px, 40vw);
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.18);
+  display: block;
+}
+.about-photo-wrap { display: flex; justify-content: center; }
+
+/* Social pills (match your chip/buttons style) */
+.social-row { margin-top: .75rem; display: flex; gap: .5rem; }
+.social {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px;
+  border-radius: 999px;
+  background: #EAE4FA;                /* same as your tags */
+  color: var(--foreground-accent);
+  font-weight: 700; font-size: .9rem; text-decoration: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,.05);
+  transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
+}
+.social:hover, .social:focus-visible {
+  background: #CBBBE0;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(143,116,181,.2);
+  outline: none;
+}
+
+/* Your pill buttons (from earlier) */
+.btn-pill{
+  display:inline-block; padding:.5rem 1.1rem; border-radius:999px;
+  background:#EAE4FA; color:var(--foreground-accent); text-decoration:none;
+  font-weight:600; font-size:.95rem; transition:all .2s ease;
+  box-shadow:0 1px 3px rgba(0,0,0,.05);
+}
+.btn-pill:hover,.btn-pill:focus-visible{
+  background:#D4C7E6; transform:translateY(-1px);
+  box-shadow:0 3px 8px rgba(143,116,181,.2);
+}
+
+/* Mobile: stack with photo on top or bottom as you prefer */
+@media (max-width: 880px){
+  .hero-about { grid-template-columns: 1fr; }
+  .about-photo-wrap { order: -1; margin-bottom: 1rem; } /* photo above text; remove to keep below */
+  .profile-photo-lg { width: min(92vw, 480px); }
+  .social-row { gap: .6rem; }
+}
+
+
+
+
 
 
 /* Dark/Light mode toggle css */
