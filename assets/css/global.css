@@ -61,7 +61,9 @@ html {
 
 .btn-pill:hover,
 .btn-pill:focus-visible {
-  background: #CBBBE0;            /* slightly darker lavender on hover */
+  /* background: #CBBBE0;            /* slightly darker lavender on hover */ */
+  background: #DFD5EC;
+  text-style:none;
   transform: translateY(-1px);
   box-shadow: 0 3px 8px rgba(143,116,181,0.2);
   color: var(--foreground-accent);
