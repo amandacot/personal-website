@@ -95,7 +95,7 @@ html {
 
 /* Photo on the right, larger, clean framing */
 .profile-photo-lg {
-  width: min(520px, 40vw);
+  width: min(400px, 40vw);
   border-radius: 12px;
   box-shadow: 0 12px 28px rgba(0,0,0,.18);
   display: block;
