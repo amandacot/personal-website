@@ -25,45 +25,6 @@
   --nav-color-opaque: #2C2C2C;
 }
 
-.xp { padding: 4rem 5%; }
-.xp-timeline { position: relative; margin: 2rem 0; }
-.xp-item { position: relative; display:flex; gap: 1rem; padding-bottom: 1.75rem; }
-.xp-line {
-  position: absolute; left: 10px; top: 16px; bottom: -6px;
-  width: 2px; background: #EAE4FA;
-}
-.xp-dot {
-  position: relative; top: 4px; left: 2px;
-  min-width: 16px; height:16px; border-radius:50%;
-  background: var(--foreground-accent);
-  box-shadow: 0 0 0 4px #EAE4FA;
-}
-.xp-content {
-  margin-left: 2rem;
-  background:#FFFFFF;
-  color: var(--nav-color);
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  padding: 1rem 1.1rem;
-  flex: 1;
-  transition: transform .15s ease, box-shadow .2s ease;
-}
-.xp-content:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,0.1); }
-.xp-content h3 { margin: 0 0 .25rem; }
-.xp-meta { color: rgba(0,0,0,0.65); font-size: .95rem; margin-bottom: .5rem; }
-.xp-bullets { margin: .5rem 0 0 1.1rem; }
-.xp-bullets li { margin-bottom: .35rem; }
-
-/* Skill tags */
-.xp-tags { margin-top: .75rem; display:flex; flex-wrap:wrap; gap:.5rem; }
-.xp-tags span{
-  font-size: .8rem;
-  padding: .25rem .5rem;
-  border-radius: 999px;
-  background: #EAE4FA;
-  color: var(--foreground-accent);
-}
-
 
 html, body {
   min-height: 100vh;
