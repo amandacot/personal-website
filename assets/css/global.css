@@ -38,24 +38,36 @@ html {
 
 .cta-row { margin-top: 1rem; display: flex; gap: .6rem; flex-wrap: wrap; }
 
-.btn-chip {
-  display: inline-block;
-  padding: .5rem 1rem;                 /* same visual weight as tags */
-  border-radius: 999px;                /* full pill */
-  background: #EAE4FA;                 /* same as tag bg */
-  color: var(--foreground-accent);     /* same as tag text (lavender) */
-  text-decoration: none;
-  font-weight: 600;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.02), 0 8px 18px rgba(143,116,181,0.15);
-  transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
+.cta-row {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
 }
 
-.btn-chip:hover,
-.btn-chip:focus-visible {
-  background: #CBBBE0;                 /* tag hover */
+/* Matches your tag chips exactly */
+.btn-pill {
+  display: inline-block;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;           /* full round pill */
+  background: #EAE4FA;            /* same background as your tags */
+  color: var(--foreground-accent); /* lavender text color from your theme */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.btn-pill:hover,
+.btn-pill:focus-visible {
+  background: #CBBBE0;            /* slightly darker lavender on hover */
   transform: translateY(-1px);
-  box-shadow: 0 2px 0 rgba(0,0,0,0.03), 0 12px 26px rgba(143,116,181,0.22);
-  outline: none;
+  box-shadow: 0 3px 8px rgba(143,116,181,0.2);
+  color: var(--foreground-accent);
+}
+.btn-pill {
+  text-shadow: 0 1px 0 rgba(255,255,255,0.6);
 }
 
 
