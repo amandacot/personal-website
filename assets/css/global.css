@@ -208,7 +208,10 @@ h1, h2, h3 {
   font-family: inherit;
   margin: 0; }
 
-/* .navbar {
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  
   background-color: var(--nav-background) !important;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
@@ -221,16 +224,7 @@ h1, h2, h3 {
 
 .navbar a:hover,
 .dropdown:hover .dropbtn {
-  display: block; } */
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.6rem 1.5rem;
-  background-color: var(--nav-background);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
+  display: block; }
 
 /* icon container */
 .navbar-icons {
