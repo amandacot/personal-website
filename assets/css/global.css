@@ -228,9 +228,8 @@ h1, h2, h3 {
 .dropdown:hover .dropbtn {
   display: block; }
 
-/* icon container */
 .navbar-icons {
-
+display: flex !important;
 }
 
 /* icon styles */
