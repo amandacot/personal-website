@@ -51,12 +51,14 @@
 .xp-line {
   position: absolute; left: 10px; top: 16px; bottom: -6px;
   width: 2px; background: #EAE4FA;
+  z-index: 0;       
 }
 .xp-dot {
   position: relative; top: 4px; left: 2px;
   min-width: 16px; height:16px; border-radius:50%;
   background: var(--foreground-accent);
   box-shadow: 0 0 0 4px #EAE4FA;
+  z-index: 1;    
 }
 .xp-content {
   margin-left: 2rem;
@@ -67,6 +69,7 @@
   padding: 1rem 1.1rem;
   flex: 1;
   transition: transform .15s ease, box-shadow .2s ease;
+  z-index: 2;       
 }
 .xp-content:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,0.1); }
 .xp-content h3 { margin: 0 0 .25rem; }
