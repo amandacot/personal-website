@@ -32,3 +32,23 @@ body.light-theme .card-home {
 
 .card .btn:hover {
   background-color: #32CBFF; }
+
+.card-home .btn {
+  display: inline-block;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  background: #EAE4FA;
+  color: var(--foreground-accent);
+  border: none;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.card-home .btn:hover,
+.card-home .btn:focus-visible {
+  background: #CBBBE0;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(143,116,181,0.2);
+}
+
