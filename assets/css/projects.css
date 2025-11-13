@@ -1,38 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:ital,wght@0,300;1,300&display=swap");
+/* You can remove this @import because you already load fonts in global.css */
+/* @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:ital,wght@0,300;1,300&display=swap"); */
+
 .card-img-custom {
   max-width: 100%;
   max-height: 100%;
   align-self: center;
-  margin-top: 20%; }
+  margin-top: 0;               /* was 20%, which pushed images too far down */
+}
 
+/* Main project card */
 .card-home {
   margin: 10px auto;
-  background-color: #4E4E56;
-  border-color: #3A3A40;
-  border-width: 5px;
-  width: 300px;
-  height: 85%;
-  padding: 5px; 
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2); }
+  background-color: #FFFFFF;   /* was #4E4E56 – now white to match your site */
+  border-color: #EAE4FA;       /* soft lavender border instead of dark gray */
+  border-width: 1px;
+  border-style: solid;
+  width: 100%;
+  max-width: 320px;            /* keeps the nice vertical card feel */
+  padding: 8px;
+  box-shadow: 0 10px 26px rgba(0,0,0,.08);  /* same style as other cards */
+}
 
-body.light-theme .card-home {
-  background-color: #D4D4D9;
-  border-color: #FBFFF1; }
-
-.card .btn {
-  background-color: #FBFFF1;
-  border: none;
-  color: #1B1B1E;
-  max-width: 70%;
-  margin: 5px;
-  margin-bottom: 10px;
-  align-self: center;
-  padding-left: 30px;
-  padding-right: 30px; }
-
-.card .btn:hover {
-  background-color: #32CBFF; }
-
+/* New pill buttons that match the rest of your site */
 .card-home .btn {
   display: inline-block;
   padding: 0.45rem 1rem;
@@ -43,6 +32,7 @@ body.light-theme .card-home {
   font-weight: 600;
   text-decoration: none;
   transition: all 0.2s ease;
+  margin: 5px auto 10px;       /* centers nicely inside the card */
 }
 
 .card-home .btn:hover,
@@ -51,4 +41,3 @@ body.light-theme .card-home {
   transform: translateY(-1px);
   box-shadow: 0 3px 8px rgba(143,116,181,0.2);
 }
-
