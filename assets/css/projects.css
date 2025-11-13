@@ -7,9 +7,17 @@
   align-self: center;
   margin-top: 0;               /* was 20%, which pushed images too far down */
 }
+.col {
+  display: flex;
+}
 
 /* Main project card */
 .card-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;   
+  
 position: relative;
   margin: 10px auto;
   background-color: #FFFFFF;   /* was #4E4E56 – now white to match your site */
@@ -34,6 +42,10 @@ position: relative;
   text-decoration: none;
   transition: all 0.2s ease;
   margin: 5px auto 10px;       /* centers nicely inside the card */
+}
+.card-home:hover {
+  transform: translateY(-4px);
+  transition: transform 0.25s ease;
 }
 
 .card-home .btn:hover,
