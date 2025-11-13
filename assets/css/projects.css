@@ -10,6 +10,7 @@
 
 /* Main project card */
 .card-home {
+position: relative;
   margin: 10px auto;
   background-color: #FFFFFF;   /* was #4E4E56 – now white to match your site */
   border-color: #EAE4FA;       /* soft lavender border instead of dark gray */
